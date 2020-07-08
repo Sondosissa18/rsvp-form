@@ -1,0 +1,40 @@
+doctype html
+html(lang="en")
+
+  head
+
+    title RSVP Form
+  
+  body
+    .container
+     h1 Contact Form
+
+    form(action="/reply" method="POST" enctype="application/json")
+      label( for= "name") Name
+      input(type= "text" name="username" id="name" placefolder="type your name" required autofocus)
+      label(for = "email") Email
+      input(type= "email" name="email" id="email" placefolder="type your email" required autofocus)
+      input(type= "radio" value="true" name="attending" id="attendingchoice1"  required )
+      label(for = "attendingchoice1")= "Attending"
+      input(type= "radio" value="false" name="attending" id="attendingchoice2"  required )
+      label(for = "attedingchoice2")= "Not Attending"
+      label(for = "number") Number of guests
+      select#number(name="number" required )
+        optgroup(label="Numberof guests")
+          option(value="1") 1
+          option(value="2") 2
+          option(value="3") 3
+          option(value="4") 4
+          option(value="5") 5
+          option(value="6") 6
+          option(value="7") 7
+          option(value="8") 8
+      
+      button(type="submit") Submit
+
+     
+    
+      
+    
+   
+  

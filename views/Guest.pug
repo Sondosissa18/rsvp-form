@@ -1,0 +1,15 @@
+doctype html
+html(lang="en")
+
+  head
+
+    title  Event RSVP Form
+  
+  body
+    .container
+     h1 Attending 
+     each rsvp in attendes 
+      li= rsvp.username 
+    h1 Not attending 
+    each rsvp in notattending 
+      li= rsvp.username
