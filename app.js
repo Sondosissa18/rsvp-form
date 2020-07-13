@@ -48,6 +48,8 @@ app.post("/reply", (req, res) => {
 
   user.save().then((savedNote) => {
     res.render("test");
+  }).catch((err) => {
+    res.json({err});
   });
 });
 
